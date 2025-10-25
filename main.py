@@ -10,6 +10,10 @@ def show_answer(inp1, inp2, operator_cb):
     operator = operator_cb.get()
 
     answer = val1 + val2
+    if operator == '-': 
+        answer = val1 - val2
+
+    
 
     messagebox.showwarning("Het antwoord!", answer)
 
@@ -33,6 +37,8 @@ operator_cb['values'] = ['+', '-']
 
 # prevent typing a value
 operator_cb['state'] = 'readonly'
+
+operator_cb.set('+')
 
 # place the widget
 operator_cb.pack(fill=tk.X, padx=5, pady=5)

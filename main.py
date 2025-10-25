@@ -1,6 +1,8 @@
-import tkinter
-m = tkinter.Tk()
+import tkinter as tk
+r = tk.Tk()
 '''
 widgets are added here
 '''
-m.mainloop()
+button = tk.Button(r, text='Stop', width=25, command=r.destroy)
+button.pack()
+r.mainloop()
